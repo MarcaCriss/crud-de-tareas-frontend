@@ -1,0 +1,80 @@
+.content {
+  width: 100%;
+  margin-top: 5px;
+  background-color: limegreen;
+  padding: 10px 0px 10px 0px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.content .tarea {
+  flex-grow: 1;
+}
+
+.content .actions {
+  flex-grow: 0;
+  flex-shrink: 0;
+  padding-right: 10px;
+}
+
+.content .actions button {
+  background-color: royalblue;
+  color: white;
+  font-weight: bold;
+  padding: 6px 9px;
+  border-radius: 25px;
+  border: 0;
+  cursor: pointer;
+}
+
+.content .actions button:hover {
+  background-color: #03a9f4;
+}
+
+.content h3 {
+  padding: 0px;
+  margin: 0px;
+}
+
+.err {
+  background-color: red;
+  color: white;
+}
+
+.content .tachado {
+  margin: 0px;
+  text-decoration: line-through;
+}
+
+.status {
+  width: 50px;
+  height: 20px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #000;
+  border-color: #000 transparent #000 transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

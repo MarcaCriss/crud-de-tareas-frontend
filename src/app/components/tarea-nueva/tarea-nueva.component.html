@@ -1,0 +1,20 @@
+<div class="card">
+  <h2>Crear nueva tarea</h2>
+  <hr>
+  <br>
+  <form [formGroup]="tarea" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="">Ingrese el titulo de su tarea: </label>
+      <input type="text" name="title" formControlName="title" [ngClass]="{ error: tituloNoValido}">
+      <span *ngIf="tituloNoValido">El titulo es requerido</span>
+    </div>
+    <div class="form-group">
+      <label for="">Ingrese el contenido de su tarea: </label>
+      <input type="text" name="content" formControlName="content" [ngClass]="{ error: contentNoValido}">
+      <span *ngIf="contentNoValido">El contenido es requerido</span>
+    </div>
+    <div class="form-group">
+      <button class="btn-primary" [disabled]="tarea.invalid">Guardar Nueva Tarea</button>
+    </div>
+  </form>
+</div>

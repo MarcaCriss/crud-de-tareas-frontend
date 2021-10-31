@@ -1,0 +1,55 @@
+<div class="lds-dual-ring" *ngIf="loading"></div>
+<div class="container" *ngIf="!loading">
+  <ng-container *ngIf="(tareas$ | async) as data">
+    <h2>Tareas Incompletas</h2>
+    <hr />
+    <article
+      *ngFor="let tarea of data[0]"
+      class="content"
+      [ngClass]="{ err: tarea.status }"
+    >
+      <input
+        type="checkbox"
+        [checked]="tarea.status"
+        (change)="change(tarea._id)"
+        class="status"
+      />
+      <div class="tarea">
+        <h3 [ngClass]="{ tachado: tarea.status }">
+          {{ tarea.title }}
+        </h3>
+        <span [ngClass]="{ tachado: tarea.status }">
+          {{ tarea.content }}
+        </span>
+      </div>
+      <div class="actions">
+        <button (click)="deleteTarea(tarea._id)">X</button>
+      </div>
+    </article>
+    <h2>Tareas completadas</h2>
+    <hr />
+    <article
+      *ngFor="let tarea of data[1]"
+      class="content"
+      [ngClass]="{ err: tarea.status }"
+    >
+      <input
+        type="checkbox"
+        [checked]="tarea.status"
+        (change)="change(tarea._id)"
+        class="status"
+      />
+      <div class="tarea">
+        <h3 [ngClass]="{ tachado: tarea.status }">
+          {{ tarea.title }}
+        </h3>
+        <span [ngClass]="{ tachado: tarea.status }">
+          {{ tarea.content }}
+        </span>
+      </div>
+      <div class="actions">
+        <button (click)="deleteTarea(tarea._id)">X</button>
+      </div>
+    </article>
+  </ng-container>
+</div>

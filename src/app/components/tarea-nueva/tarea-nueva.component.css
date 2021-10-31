@@ -1,0 +1,57 @@
+.form-group{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+label{
+  margin-bottom: 10px;
+}
+
+.btn-primary{
+  color: white;
+  background-color: rgb(35, 156, 255);
+  border: none;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.card{
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  -webkit-box-shadow: -1px 0px 15px 1px rgba(0,0,0,0.75);
+  -moz-box-shadow: -1px 0px 15px 1px rgba(0,0,0,0.75);
+  box-shadow: -1px 0px 15px 1px rgba(0,0,0,0.75);
+}
+
+.card h2 {
+  padding: 0px 0px 0px 10px;
+  margin: 10px 0px 0px 0px;
+}
+
+.card hr {
+  margin: 0px 10px;
+}
+
+input {
+  height: 20px;
+  border: 1px solid black;
+  border-radius: 10px;
+  font-size: 18px;
+  padding: 8px 15px 8px 15px;
+}
+
+.error{
+  border: 1px solid red;
+}
+
+button:disabled {
+  background-color: gray;
+  color: darkgray;
+}
+
+.form-group span {
+  color: red;
+  padding-top: 3px;
+}
